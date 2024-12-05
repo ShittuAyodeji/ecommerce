@@ -7,7 +7,7 @@ const prismaClientSingleton = () => {
 };
 
 declare global {
-  let prisma: undefined | ReturnType<typeof prismaClientSingleton>;
+  var prisma: undefined | ReturnType<typeof prismaClientSingleton>;
 }
 
 const db = globalThis.prisma ?? prismaClientSingleton();
